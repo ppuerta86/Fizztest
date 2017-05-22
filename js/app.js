@@ -1,6 +1,24 @@
 $(document).ready(function(){
     
     
+    //menu responsive
+    $("#showMenu").click(function(){
+		$("#MovilMenu").slideDown(700).addClass("Menu");
+	});
+     $("#CloseMenu").click(function(){
+		$("#MovilMenu").slideUp(700).removeClass("Menu");
+	});
+    $("#CloseHombre").click(function(){
+		$("#MovilMenu").slideUp(700).removeClass("Menu");
+	});
+    $("#CloseMujer").click(function(){
+		$("#MovilMenu").slideUp(700).removeClass("Menu");
+	});
+    $("#CloseBoy").click(function(){
+		$("#MovilMenu").slideUp(700).removeClass("Menu");
+	});
+
+    
     
     
     
@@ -94,19 +112,19 @@ function errorEnvio(datos){
 	{ title: 'Short', price: 320.44, category: 'Vestimenta', image: 'http://placehold.it/225x225', brand: 'nike' },
 	{ title: 'Pantalón', price: 360.44, category: 'Natación', image: 'http://placehold.it/225x225', brand: 'nike' }	
 ];
-var lista = "";
-    var inpar = ""
-    for (var i = 0; i < products.length; i++) {
-  console.log("Tipo: " + products[i].title + ", Precio: " + products[i].price + ", Categoria: " + products[i].category + ", Foto: " + products[i].image + ", Marca: " + products[i].brand);
-        
-if (i%2==0) {
-    inpar = "oferta";
-} else {
-  inpar = "";
-} 
+        var lista = "";
+            var inpar = ""
+            for (var i = 0; i < products.length; i++) {
+          console.log("Tipo: " + products[i].title + ", Precio: " + products[i].price + ", Categoria: " + products[i].category + ", Foto: " + products[i].image + ", Marca: " + products[i].brand);
+
+        if (i%2==0) {
+            inpar = "oferta";
+        } else {
+          inpar = "";
+        } 
 
                lista=lista+
-                    ' <div class="colum colum-3">' +
+                    ' <div class="colum colum-3 colum-tablet-movil">' +
                     '<div class="productos">' +
                     '<div class="img-productos imagen">' +
                     '<img class="img" src="'+ products[i].image +'" alt="">' +
