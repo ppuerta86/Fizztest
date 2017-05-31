@@ -2,21 +2,21 @@ $(document).ready(function(){
     
     
     //menu responsive
-    $("#showMenu").click(function(){
-		$("#MovilMenu").slideDown(700).addClass("Menu");
-	});
-     $("#CloseMenu").click(function(){
-		$("#MovilMenu").slideUp(700).removeClass("Menu");
-	});
-    $("#CloseHombre").click(function(){
-		$("#MovilMenu").slideUp(700).removeClass("Menu");
-	});
-    $("#CloseMujer").click(function(){
-		$("#MovilMenu").slideUp(700).removeClass("Menu");
-	});
-    $("#CloseBoy").click(function(){
-		$("#MovilMenu").slideUp(700).removeClass("Menu");
-	});
+//    $("#showMenu").click(function(){
+//		$("#MovilMenu").slideDown(700).addClass("Menu");
+//	});
+//     $("#CloseMenu").click(function(){
+//		$("#MovilMenu").slideUp(700).removeClass("Menu");
+//	});
+//    $("#CloseHombre").click(function(){
+//		$("#MovilMenu").slideUp(700).removeClass("Menu");
+//	});
+//    $("#CloseMujer").click(function(){
+//		$("#MovilMenu").slideUp(700).removeClass("Menu");
+//	});
+//    $("#CloseBoy").click(function(){
+//		$("#MovilMenu").slideUp(700).removeClass("Menu");
+//	});
 
     
     
@@ -103,46 +103,7 @@ function errorEnvio(datos){
             $(".contenedor-check").slideUp(500).removeAttr("id","contenedor-check");
      });
     
-    
-    /*lista de productos*/
-     var products = [
-	{ title: 'Botín', price: 800.44, category: 'Botines', image: 'http://placehold.it/225x225', brand: 'nike' },
-	{ title: 'Ojotas', price: 300.99, category: 'Ojotas', image: 'http://placehold.it/225x225', brand: 'adidas' },
-	{ title: 'Zapatillas', price: 1120.00, category: 'Calzado', image: 'http://placehold.it/225x225', brand: 'puma' },
-	{ title: 'Short', price: 320.44, category: 'Vestimenta', image: 'http://placehold.it/225x225', brand: 'nike' },
-	{ title: 'Pantalón', price: 360.44, category: 'Natación', image: 'http://placehold.it/225x225', brand: 'nike' }	
-];
-        var lista = "";
-            var inpar = ""
-            for (var i = 0; i < products.length; i++) {
-          console.log("Tipo: " + products[i].title + ", Precio: " + products[i].price + ", Categoria: " + products[i].category + ", Foto: " + products[i].image + ", Marca: " + products[i].brand);
 
-        if (i%2==0) {
-            inpar = "oferta";
-        } else {
-          inpar = "";
-        } 
-
-               lista=lista+
-                    ' <div class="colum colum-3 colum-tablet-movil">' +
-                    '<div class="productos">' +
-                    '<div class="img-productos imagen">' +
-                    '<img class="img" src="'+ products[i].image +'" alt="">' +
-                    '</div>' +
-                    '<div class="texto-media">' +
-
-                    ' <p class="'+ inpar +' off"></p>' +
-                    ' <p class="big">' + products[i].title + '</p>' +
-                    '<p class="verde">$ ' + products[i].price + ' <span class="'+ products[i].brand + '"></span></p>' +
-                    ' <p class="category">'+ products[i].category + '</p>' +
-                 '</div>' +
-                   
-                   '</div>' +
-                    '</div>';
-      
-       
-    };  
-    document.getElementById("row").innerHTML = lista;
     
     /*mouse over fotos productos*/
    
